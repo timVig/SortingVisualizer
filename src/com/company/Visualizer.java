@@ -176,7 +176,6 @@ public class Visualizer {
             try { visualizeReplay( replays, chart, wrapper, index ); }
             catch (InterruptedException interruptedException) { interruptedException.printStackTrace(); }
             finally {
-                System.out.println("Releasing");
                 semaphore.release();
             }
         });
